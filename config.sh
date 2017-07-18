@@ -236,6 +236,12 @@ case "$1" in
 	repo_sync project-tablet
 	;;
 
+"moto-x-force")
+	echo DEVICE=kinzie >> .tmp-config &&
+	echo PRODUCT_NAME=kinzie >> .tmp-config &&
+	repo_sync moto-x-force
+	;;
+	
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -248,6 +254,7 @@ case "$1" in
 	echo - nexus-5
 	echo - nexus-5-l
 	echo - nexus-6-l
+	echo - moto-x-force
 	echo - nexusplayer-l
 	echo - nexus-s
 	echo - nexus-s-4g
